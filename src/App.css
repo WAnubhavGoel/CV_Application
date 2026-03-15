@@ -4,6 +4,7 @@ body{
   padding: 0;
   width: 100vw;
   min-height: 100vh;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .sub-heading{
   display: flex;
@@ -24,7 +25,6 @@ body{
   background:#ffffff;
   display:flex;
   flex-direction:column;
-  gap:1.5rem;
 }
 
 .sub-heading{
@@ -57,11 +57,13 @@ form{
 
 .form-group input{
   padding:0.5rem 0.7rem;
-  font-size:0.9rem;
+  font-size:1.2rem;
   border:0.1rem solid #d1d5db;
   border-radius:0.4rem;
   outline:none;
+  height: 2rem;
 }
+
 
 .form-group input:focus{
   border-color:#2563eb;
@@ -83,4 +85,12 @@ button[type="submit"]{
 
 button[type="submit"]:hover{
   background:#15803d;
+}
+
+textarea{
+  padding:0.5rem 0.7rem;
+  font-size:1.2rem;
+  border:0.1rem solid #d1d5db;
+  border-radius:0.4rem;
+  outline:none;
 }

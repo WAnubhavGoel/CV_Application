@@ -13,19 +13,48 @@ function GeneralInformation({data,onSubmit}){
                 <form>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
-                        <input type="text" id="name"/>
+                        <input type="text" id="name"
+                            onChange={(e)=>{
+                                setFormData({...formData,name:e.target.value});
+                            }}
+                            value={formData.name}
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email:</label>
-                        <input type="text" id="email"/>
+                        <input type="text" id="email"
+                            onChange={(e)=>{
+                                setFormData({...formData,email:e.target.value});
+                            }}
+                            value={formData.email}
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="phoneNumber">Phone:</label>
-                        <input type="number" id="phoneNumber"/>
+                        <input type="number" id="phoneNumber"
+                            onChange={(e)=>{
+                                setFormData({...formData,phone_number:e.target.value});
+                            }}
+                            value={formData.phone_number}
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="address">Address:</label>
-                        <textarea name="" id="address" cols="20" rows="10"></textarea>
+                        <input type="text" id="address"
+                            onChange={(e)=>{
+                                setFormData({...formData,address:e.target.value});
+                            }}
+                            value={formData.address}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="objective">Objective:</label>
+                        <textarea name="" id="objective" cols="20" rows="7"
+                            onChange={(e)=>{
+                                setFormData({...formData,objective:e.target.value});
+                            }}
+                            value={formData.objective}
+                        ></textarea>
                     </div>
                 </form>
             </div>
