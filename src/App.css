@@ -95,3 +95,136 @@ textarea {
   border-radius: 0.4rem;
   outline: none;
 }
+.right {
+  width: 100%;
+  padding: rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.resume-container {
+  background-color: white;
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 8px 15px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+
+  width: 100%;
+  max-width: 850px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.resume-header {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  display: block;
+  background-color: #e2e8f0;
+  color: transparent;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  color: #12355b;
+  font-size: 48px;
+  margin: 0 0 25px 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 18px;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+.contact-label {
+  font-weight: 700;
+  color: #12355b;
+}
+
+.contact-value {
+  color: #444;
+}
+
+.resume-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  color: #12355b;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+  letter-spacing: 1px;
+}
+
+.section-divider {
+  border: none;
+  border-top: 4px solid #111;
+  margin: 0 0 25px 0;
+  width: 100%;
+}
+
+.objective-text {
+  line-height: 1.8;
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+.experience-item {
+  display: flex;
+  line-height: 1.6;
+}
+
+.date-column {
+  width: 250px;
+  flex-shrink: 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+}
+
+.details-column {
+  flex-grow: 1;
+}
+
+.institution {
+  font-size: 22px;
+  color: #12355b;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.degree {
+  font-size: 18px;
+  margin: 0;
+  color: #444;
+}

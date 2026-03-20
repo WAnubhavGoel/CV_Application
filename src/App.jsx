@@ -3,6 +3,7 @@ import {defData} from './components/data';
 import {GeneralInformation} from './components/GeneralInformation';
 import {EducationalExperience} from './components/EducationExperience';
 import {WorkExperience} from './components/WorkExperience';
+import {MainResume} from './components/MainResume';
 import './App.css';
 function App() {
   const [data, setData] = useState(defData);
@@ -44,7 +45,9 @@ function App() {
           }}
         ></WorkExperience>
       </div>
-      <div className="right"></div>
+      <div className="right">
+        <MainResume data={data}></MainResume>
+      </div>
     </div>
   );
 }
