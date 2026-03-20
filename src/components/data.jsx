@@ -11,7 +11,7 @@ let defData={
         city:"Massachusetts",
         country:"USA",
         major:"CS",
-        Degree:"Bachelor",
+        degree:"Bachelor",
         start_date:"",
         end_date:"",
     },

@@ -1,16 +1,22 @@
 import { useState } from "react";
 import "../App.css"
-function GeneralInformation({data,onSubmit}){
+function GeneralInformation({data,onSubmit,isActive,onShow}){
     const [editing,setIsEditing]=useState(true);
     const [formData,setFormData]=useState(data);
-    if(editing){
+    function handleFormSubmit(e){
+        e.preventDefault();
+        onSubmit(formData);
+        setIsEditing(false);
+        onShow(1);
+    }
+    if(editing && isActive){
         return(
             <div className="general-info">
                 <div className="sub-heading">
                     <h3 className="head">General Information</h3>
-                    <button type="submit">Submit</button>
+                    <button type="submit" form="general-info-form">Submit</button>
                 </div>
-                <form>
+                <form id="general-info-form" onSubmit={handleFormSubmit}>
                     <div className="form-group">
                         <label htmlFor="name">Name:</label>
                         <input type="text" id="name"
@@ -48,8 +54,8 @@ function GeneralInformation({data,onSubmit}){
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="objective">Objective:</label>
-                        <textarea name="" id="objective" cols="20" rows="7"
+                        <label htmlFor="start-date">Objective:</label>
+                        <textarea name="" id="start-date" cols="20" rows="7"
                             onChange={(e)=>{
                                 setFormData({...formData,objective:e.target.value});
                             }}
@@ -57,6 +63,20 @@ function GeneralInformation({data,onSubmit}){
                         ></textarea>
                     </div>
                 </form>
+            </div>
+        )
+    }
+    else{
+        return(
+            <div className="general-info">
+                <div className="sub-heading">
+                    <h3 className="head">General Information</h3>
+                    <button type="button" onClick={(e)=>{
+                        e.preventDefault();
+                        setIsEditing(true);
+                        onShow(0);
+                    }}>Edit</button>
+                </div>
             </div>
         )
     }
