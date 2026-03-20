@@ -1,6 +1,7 @@
-html{
-  font-size: 12px;
+html {
+  font-size: 16px;
 }
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -11,20 +12,24 @@ body {
     system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
+
 .sub-heading {
   display: flex;
   gap: 7rem;
 }
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
 }
+
 .left {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 .general-info {
   width: 28rem;
   background: #ffffff;
@@ -98,6 +103,7 @@ textarea {
   border-radius: 0.4rem;
   outline: none;
 }
+
 .right {
   width: 100%;
   display: flex;
@@ -108,33 +114,32 @@ textarea {
 
 .resume-container {
   background-color: white;
-  padding: 60px;
-  border-radius: 8px;
+  padding: 3.75rem;
+  border-radius: 0.5rem;
   box-shadow:
-    0 4px 15px rgba(0, 0, 0, 0.2),
-    inset 0 8px 15px rgba(0, 0, 0, 0.05);
+    0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2),
+    inset 0 0.5rem 0.9375rem rgba(0, 0, 0, 0.05);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
-
   width: 100%;
-  max-width: 850px;
+  max-width: 53.125rem;
   box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 2.1875rem;
 }
+
 .resume-header {
   display: flex;
   align-items: center;
-  gap: 45px;
+  gap: 2.8125rem;
 }
 
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 11.25rem;
+  height: 11.25rem;
   object-fit: cover;
-  border: 1px solid #ccc;
+  border: 0.0625rem solid #ccc;
   display: block;
   background-color: #e2e8f0;
   color: transparent;
@@ -148,20 +153,20 @@ textarea {
 
 .name {
   color: #12355b;
-  font-size: 48px;
-  margin: 0 0 25px 0;
+  font-size: 3rem;
+  margin: 0 0 1.5625rem 0;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  font-size: 18px;
+  gap: 0.875rem;
+  font-size: 1.125rem;
 }
 
 .contact-row {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 6.25rem 1fr;
 }
 
 .contact-label {
@@ -180,23 +185,23 @@ textarea {
 
 .section-title {
   color: #12355b;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 12px 0;
-  letter-spacing: 1px;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 0.0625rem;
 }
 
 .section-divider {
   border: none;
-  border-top: 4px solid #111;
-  margin: 0 0 25px 0;
+  border-top: 0.25rem solid #111;
+  margin: 0 0 1.5625rem 0;
   width: 100%;
 }
 
 .objective-text {
   line-height: 1.8;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #333;
   margin: 0;
 }
@@ -207,9 +212,9 @@ textarea {
 }
 
 .date-column {
-  width: 250px;
+  width: 15.625rem;
   flex-shrink: 0;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #333;
   font-weight: 500;
 }
@@ -219,14 +224,14 @@ textarea {
 }
 
 .institution {
-  font-size: 22px;
+  font-size: 1.375rem;
   color: #12355b;
   font-weight: 700;
-  margin: 0 0 8px 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .degree {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin: 0;
   color: #444;
 }
