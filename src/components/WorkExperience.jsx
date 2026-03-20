@@ -1,77 +1,42 @@
 import {useState} from 'react';
-import '../App.css';
-function EducationalExperience({data, onSubmit, isActive, onShow}) {
+function WorkExperience({data, onSubmit, isActive, onShow}) {
   const [editing, setIsEditing] = useState(true);
   const [formData, setFormData] = useState(data);
   function handleFormSubmit(e) {
     e.preventDefault();
-    setIsEditing(false);
     onSubmit(formData);
-    onShow(2);
+    setIsEditing(false);
   }
   if (editing && isActive) {
     return (
       <div className="general-info">
         <div className="sub-heading">
-          <h3 className="head">Educational Experience</h3>
+          <h3 className="head">Work Experience:</h3>
           <button type="submit" form="general-info-form">
             Submit
           </button>
         </div>
         <form id="general-info-form" onSubmit={handleFormSubmit}>
           <div className="form-group">
-            <label htmlFor="name">School Name:</label>
+            <label htmlFor="company-name">Company Name:</label>
             <input
               type="text"
-              id="name"
+              id="company-name"
               onChange={(e) => {
-                setFormData({...formData, school_name: e.target.value});
+                setFormData({...formData, company_name: e.target.value});
               }}
-              value={formData.school_name}
+              value={formData.company_name}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="city">City:</label>
+            <label htmlFor="position">Position:</label>
             <input
               type="text"
-              id="city"
+              id="position"
               onChange={(e) => {
-                setFormData({...formData, city: e.target.value});
+                setFormData({...formData, position: e.target.value});
               }}
-              value={formData.city}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="country">Country:</label>
-            <input
-              type="text"
-              id="country"
-              onChange={(e) => {
-                setFormData({...formData, country: e.target.value});
-              }}
-              value={formData.country}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="major">Major:</label>
-            <input
-              type="text"
-              id="major"
-              onChange={(e) => {
-                setFormData({...formData, major: e.target.value});
-              }}
-              value={formData.major}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="degree">Degree:</label>
-            <input
-              type="text"
-              id="degree"
-              onChange={(e) => {
-                setFormData({...formData, degree: e.target.value});
-              }}
-              value={formData.degree}
+              value={formData.position}
             />
           </div>
           <div className="form-group">
@@ -103,13 +68,13 @@ function EducationalExperience({data, onSubmit, isActive, onShow}) {
     return (
       <div className="general-info">
         <div className="sub-heading">
-          <h3 className="head">Educational Experience</h3>
+          <h3 className="head">Work Experience:</h3>
           <button
             type="button"
             onClick={(e) => {
               e.preventDefault();
               setIsEditing(true);
-              onShow(1);
+              onShow(2);
             }}
           >
             Edit
@@ -119,4 +84,4 @@ function EducationalExperience({data, onSubmit, isActive, onShow}) {
     );
   }
 }
-export {EducationalExperience};
+export {WorkExperience};
