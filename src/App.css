@@ -127,6 +127,8 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 2.1875rem;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
 }
 
 .resume-header {
